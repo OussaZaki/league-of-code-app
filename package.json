@@ -17,7 +17,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "firebase deploy --only hosting:adventofcode"
   },
   "eslintConfig": {
     "extends": "react-app"
