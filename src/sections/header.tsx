@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
           Join the leaderboard
         </a>
         <br />
-        using the code 314807-18da893f
+        using the code 12900-d95e2214
       </p>
     </header>
   );
