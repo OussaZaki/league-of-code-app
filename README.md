@@ -3,8 +3,7 @@
 Advanced Leaderboard for Advent Of Code, includes:
 
 - Ranking system with divisions.
-- Detailed infos on participants.
-- Participants programming languages.
+- Participants rich infos.
 
 ## Available Scripts
 
@@ -26,6 +25,7 @@ This deploy the app to firebase, you may need to install and setup firebise CLI 
 
 ## TODO (Help is welcomed)
 
-- Add indexes to the tables (1, 2, 3...)
-- Add feature to allow Participants to update their data (github url, tags...).
+- ~~Add indexes to the tables (1, 2, 3...)~~
+- ~~Add feature to allow Participants to update their data (github url, tags...).~~
+- Edit profile on row click.
 - The target leaderboard is set for Klarna's internal one. it would be nice to have it supported any private leaderboard through providing the target leaderboard's URL.

@@ -78,3 +78,15 @@ body {
   text-align: left;
   color: #8c8c8c;
 }
+
+.form-title {
+  margin-bottom: 0;
+}
+
+.form-subtitle {
+  margin-bottom: 1.6em;
+}
+
+.green {
+  color: #09d3ac;
+}

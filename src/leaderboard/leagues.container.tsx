@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Spin, Icon, Alert } from 'antd';
 
-import { RankTable } from '../components/RankTable';
+import { RankTable } from './rank-table.component';
 import { capitalize } from '../helpers/capitalize';
-import { getLeaderboard } from '../services/getLeaderboard';
+import { getLeaderboard } from './get-leaderboard.service';
+import { Player } from '../player/player.model';
 
 type Division = 'master' | 'diamond' | 'gold' | 'silver';
-type League = Record<Division, any[]>;
+type League = Record<Division, Player[]>;
 const antIcon = (
   <Icon type="loading" style={{ fontSize: 32, color: '#09d3ac' }} spin />
 );
@@ -23,7 +24,11 @@ const _mapLeague = (league: League) =>
     </div>
   ));
 
-export const Leagues: React.FC = () => {
+type Props = {
+  edits: number;
+};
+
+export const LeaguesProvider: React.FC<Props> = ({ edits }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [league, setLeague] = useState<League>({
@@ -50,7 +55,7 @@ export const Leagues: React.FC = () => {
     return () => {
       didCancel = true;
     };
-  }, []);
+  }, [edits]);
 
   return (
     <div className="leagues">
